@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "student1" class = "dependencyInjection_A1.Student">
+      <property name = "studentId" value = "S001"/>
+      <property name = "studentName" value = "Steve"/>
+      <property name="studentTest">
+      	<list>
+      	<!-- <ref local="studentTest"/> another type-->
+      	<ref bean="studentTest1"/>
+      	</list>
+      </property>
+   </bean>
+   <bean id = "student2" class = "dependencyInjection_A1.Student">
+      <property name = "studentId" value = "S002"/>
+      <property name = "studentName" value = "Oliver"/>
+      <property name="studentTest">
+      	<list>
+      	<!-- <ref local="studentTest"/> another type-->
+      	<ref bean="studentTest1"/>
+      	<ref bean="studentTest2"/>
+      	</list>
+      </property>
+   </bean>
+   <bean id = "studentTest1" class = "dependencyInjection_A1.Test">
+      <property name = "testId" value = "T001"/>
+      <property name = "testTitle" value = "Core Java Test"/>
+      <property name = "testMarks" value = "80"/>
+      </bean>
+      <bean id = "studentTest2" class = "dependencyInjection_A1.Test">
+      <property name = "testId" value = "T002"/>
+      <property name = "testTitle" value = "Spring_L1"/>
+      <property name = "testMarks" value = "100"/>
+      </bean>
+
+</beans>

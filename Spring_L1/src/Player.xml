@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "player1" class = "dependencyInjection_A2.Player">
+      <property name = "playerId" value = "P001"/>
+      <property name = "playerName" value = "Sachin"/>
+      <property name="country" ref="country1">
+      
+      </property>
+   </bean>
+    <bean id = "player2" class = "dependencyInjection_A2.Player">
+      <property name = "playerId" value = "P002"/>
+      <property name = "playerName" value = "Dhoni"/>
+      <property name="country" ref="country1">
+      
+      </property>
+   </bean>
+    <bean id = "player3" class = "dependencyInjection_A2.Player">
+      <property name = "playerId" value = "P003"/>
+      <property name = "playerName" value = "Smith"/>
+      <property name="country" ref="country2">
+      
+      </property>
+   </bean>
+    <bean id = "player4" class = "dependencyInjection_A2.Player">
+      <property name = "playerId" value = "P004"/>
+      <property name = "playerName" value = "kohli"/>
+      <property name="country" ref="country1">
+      
+      </property>
+   </bean>
+    <bean id = "player5" class = "dependencyInjection_A2.Player">
+      <property name = "playerId" value = "P005"/>
+      <property name = "playerName" value = "Strack"/>
+      <property name="country" ref="country2">
+      
+      </property>
+   </bean>
+   <bean id = "country1" class = "dependencyInjection_A2.Country">
+      <property name = "countryId" value = "C001"/>
+      <property name = "countryName" value = "India"/>
+      
+      </bean>
+        <bean id = "country2" class = "dependencyInjection_A2.Country">
+      <property name = "countryId" value = "C002"/>
+      <property name = "countryName" value = "Australia"/>
+      
+      </bean>
+
+</beans>
